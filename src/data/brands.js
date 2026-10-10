@@ -1,4 +1,5 @@
-// Brand content — one object per brand. Each detail page is built from this file.
+// Brand content — one object per brand.
+// `link` is the brand's own site; leave "" until it is ready and the Explore button goes to the home page.
 // `color` must match a key in tailwind.config.js → theme.extend.colors.brand
 export const brands = [
   {
@@ -8,6 +9,7 @@ export const brands = [
     category: "Communication training",
     tagline: "Dare to speak",
     color: "#D49A1C",
+    link: "",
     summary:
       "Communication and spoken-English training for school students, college students, teaching faculty and working professionals, delivered on campus or in open batches.",
     intro:
@@ -32,6 +34,7 @@ export const brands = [
     category: "Campus English",
     tagline: "Power your English",
     color: "#4A2F86",
+    link: "",
     summary:
       "An 18-hour placement programme for final-year students: group discussion, interview answers and the confidence to speak in the first five minutes of a room.",
     intro:
@@ -56,6 +59,7 @@ export const brands = [
     category: "School tuition",
     tagline: "Learn smart. Score more.",
     color: "#7B3FA0",
+    link: "",
     summary:
       "After-school tuition for Classes 6–12 across State Board, CBSE and ICSE, with small batches and weekly parent updates.",
     intro:
@@ -80,6 +84,7 @@ export const brands = [
     category: "English fundamentals",
     tagline: "[Tagline]",
     color: "#17795C",
+    link: "",
     summary:
       "Grammar and sentence-building from the ground up, for learners who were taught English but never got to use it.",
     intro:
@@ -104,6 +109,7 @@ export const brands = [
     category: "Speaking and coaching",
     tagline: "Inspire. Influence. Ignite.",
     color: "#C0392B",
+    link: "",
     summary:
       "The founder's own practice — keynotes, teacher workshops and leadership communication sessions for institutions and companies.",
     intro:
@@ -123,5 +129,3 @@ export const brands = [
     external: { label: "Visit shyamraj.in", href: "https://shyamraj.in" },
   },
 ];
-
-export const getBrand = (slug) => brands.find((b) => b.slug === slug);

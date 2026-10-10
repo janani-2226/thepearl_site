@@ -11,6 +11,15 @@ const finder = [
   { who: "An event, staff room or leadership team", slug: "shyamraj" },
 ];
 
+// Goes to the brand's own site once `link` is set in brands.js; until then, back to the home page.
+function BrandLink({ brand, children, ...rest }) {
+  return brand.link ? (
+    <a href={brand.link} target="_blank" rel="noreferrer" {...rest}>{children}</a>
+  ) : (
+    <Link to="/" {...rest}>{children}</Link>
+  );
+}
+
 export default function Brands() {
   return (
     <>
@@ -24,9 +33,8 @@ export default function Brands() {
       <section className="py-20 sm:py-24">
         <div className="container-site grid gap-6 md:grid-cols-2">
           {brands.map((b, i) => (
-            <Link
+            <div
               key={b.slug}
-              to={`/brands/${b.slug}`}
               className={`group flex flex-col border border-slate-200 bg-white p-8 transition hover:-translate-y-0.5 hover:shadow-lg ${
                 i === brands.length - 1 ? "md:col-span-2" : ""
               }`}
@@ -43,10 +51,10 @@ export default function Brands() {
                   <span key={a} className="rounded-full bg-mist px-3 py-1 text-xs text-navy/70">{a}</span>
                 ))}
               </div>
-              <span className="mt-6 text-sm font-semibold" style={{ color: b.color }}>
+              <BrandLink brand={b} className="mt-6 w-fit text-sm font-semibold" style={{ color: b.color }}>
                 Explore {b.short} →
-              </span>
-            </Link>
+              </BrandLink>
+            </div>
           ))}
         </div>
       </section>
@@ -62,13 +70,13 @@ export default function Brands() {
             {finder.map((f) => {
               const b = brands.find((x) => x.slug === f.slug);
               return (
-                <Link key={f.slug} to={`/brands/${b.slug}`} className="group flex items-center justify-between gap-6 border-b border-slate-300 py-5">
+                <BrandLink key={f.slug} brand={b} className="group flex items-center justify-between gap-6 border-b border-slate-300 py-5">
                   <span className="text-base">{f.who}</span>
                   <span className="flex items-center gap-3 text-sm font-semibold" style={{ color: b.color }}>
                     <span className="hidden h-1 w-6 rounded sm:block" style={{ background: b.color }} />
                     {b.short}
                   </span>
-                </Link>
+                </BrandLink>
               );
             })}
           </div>

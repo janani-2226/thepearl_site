@@ -37,7 +37,7 @@ export default function Home() {
             {brands.map((b, i) => (
               <Link
                 key={b.slug}
-                to={`/brands/${b.slug}`}
+                to="/brands"
                 className={`group px-4 py-6 transition hover:bg-white/5 sm:px-5 ${i > 0 ? "lg:border-l lg:border-white/15" : ""}`}
               >
                 <span className="block h-1 w-6 rounded" style={{ background: b.color }} />
@@ -78,7 +78,7 @@ export default function Home() {
             {brands.map((b) => (
               <Link
                 key={b.slug}
-                to={`/brands/${b.slug}`}
+                to="/brands"
                 className="group grid gap-4 border-b border-slate-300 py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10"
               >
                 <div className="flex gap-4">
