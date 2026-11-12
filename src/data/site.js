@@ -137,21 +137,21 @@ export const team = {
       ],
     },
     {
-      name: "Aruljothi",
-      role: "Brand Head – Pearl Academy",
-      image: "/team/Aruljothi.png",
-      imagePosition: "top",
-      bio: [
-        "Aruljothi leads Pearl Academy, dedicated to training teachers to teach English. She drives the academy's programmes and institutional engagement, empowering educators with effective teaching methodologies, language proficiency and classroom confidence to create better learning experiences for students.",
-      ],
-    },
-    {
       name: "Selvarubini",
       role: "Brand Head – Abacus of English",
       image: "/team/rubini.png",
       imagePosition: "top",
       bio: [
         "Selvarubini leads Abacus of English, offering spoken English products for everyone. She focuses on brand development, product outreach and learner engagement, making English learning accessible, practical and engaging while helping individuals build communication skills and confidence for everyday life.",
+      ],
+    },
+    {
+      name: "Aruljothi",
+      role: "Brand Head – Pearl Academy",
+      image: "/team/Aruljothi.png",
+      imagePosition: "top",
+      bio: [
+        "Aruljothi leads Pearl Academy, dedicated to training teachers to teach English. She drives the academy's programmes and institutional engagement, empowering educators with effective teaching methodologies, language proficiency and classroom confidence to create better learning experiences for students.",
       ],
     },
   ],
