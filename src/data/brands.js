@@ -22,7 +22,7 @@ export const brands = [
   },
   {
     slug: "beehive",
-    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l1.png?updatedAt=1786009288839",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/beehive%20logo.jpeg",
     name: "Beehive Communication Club",
     short: "Beehive",
     category: "Communication training",
@@ -48,7 +48,7 @@ export const brands = [
   },
   {
     slug: "project-punch",
-    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l2.png?updatedAt=1786009289132",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/project%20punch.png",
     name: "Project Punch",
     short: "Project Punch",
     category: "Campus English",
@@ -74,7 +74,7 @@ export const brands = [
   },
   {
     slug: "shyamraj",
-    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l4.png?updatedAt=1786009289105",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/shyam.png",
     name: "Shyamraj",
     short: "Shyamraj",
     category: "Speaking and coaching",
@@ -127,7 +127,7 @@ export const brands = [
   },
   {
     slug: "smart3-tuitions",
-    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l3.png?updatedAt=1786009289139",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Smart3Tution.png",
     name: "Smart3 Tuitions",
     short: "Smart3 Tuitions",
     category: "School tuition",

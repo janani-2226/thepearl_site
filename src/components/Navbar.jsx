@@ -14,7 +14,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-mist/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur">
       <div className="container-site flex h-16 items-center justify-between">
         <Logo />
         <nav className="hidden items-center gap-8 md:flex">
@@ -39,7 +39,7 @@ export default function Navbar() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-slate-200 bg-mist md:hidden">
+        <nav className="border-t border-slate-200 bg-white md:hidden">
           <div className="container-site flex flex-col py-3">
             {navLinks.map((l) => (
               <NavLink key={l.to} to={l.to} end={l.to === "/"} className={({ isActive }) => `py-3 text-base ${isActive ? "font-semibold text-navy" : "text-navy/70"}`}>

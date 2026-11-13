@@ -5,7 +5,7 @@ export default function Logo({ light = false }) {
   if (!light) {
     return (
       <Link to="/" className="flex items-center" aria-label="The Pearl — home">
-        <img src="/team/Pearl%20Logo.png" alt="The Pearl Edu Ventures" className="h-10 w-auto sm:h-12" />
+        <img src="https://ik.imagekit.io/vftyrvygo/Pearl%20World/Pearl%20Logo.png" alt="The Pearl Edu Ventures" className="h-10 w-auto sm:h-12" />
       </Link>
     );
   }
