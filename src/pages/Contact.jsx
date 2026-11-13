@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 import { site } from "../data/site.js";
 import { brands } from "../data/brands.js";
 import PageHeader from "../components/PageHeader.jsx";
+
+// Enquiries are emailed to pearlsocialz@gmail.com via EmailJS (https://www.emailjs.com).
+// The IDs come from .env (see .env.example).
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const enquiryTypes = [
   { value: "institution", label: "Programme for my institution" },
@@ -19,13 +26,38 @@ export default function Contact() {
     name: "", email: "", phone: "", organisation: "",
     type: params.get("type") || "institution", brand: "", message: "",
   });
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // TODO: connect to your backend, Formspree, EmailJS or a Google Sheet webhook.
-    console.log("Enquiry", form);
-    setSent(true);
+    setSending(true);
+    setError("");
+    const typeLabel = enquiryTypes.find((t) => t.value === form.type)?.label || form.type;
+    const brandName = brands.find((b) => b.slug === form.brand)?.name || "Not sure yet";
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          enquiry_type: typeLabel,
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "-",
+          organisation: form.organisation || "-",
+          brand: brandName,
+          message: form.message,
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
+      setSent(true);
+    } catch (err) {
+      console.error("EmailJS error", err);
+      setError(`Sorry, your enquiry could not be sent. Please try again or call us on ${site.phone}.`);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -87,7 +119,10 @@ export default function Contact() {
                   />
                 </label>
                 <div className="sm:col-span-2">
-                  <button type="submit" className="btn-dark">Send enquiry</button>
+                  {error && <p className="mb-4 text-sm text-red-600" role="alert">{error}</p>}
+                  <button type="submit" className="btn-dark disabled:opacity-60" disabled={sending}>
+                    {sending ? "Sending…" : "Send enquiry"}
+                  </button>
                 </div>
               </form>
             )}

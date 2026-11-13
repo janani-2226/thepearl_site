@@ -81,8 +81,16 @@ export default function Home() {
                 to="/brands"
                 className="group grid gap-4 border-b border-slate-300 py-7 md:grid-cols-[1fr_1.4fr_auto] md:items-center md:gap-10"
               >
-                <div className="flex gap-4">
-                  <span className="w-1 shrink-0 rounded" style={{ background: b.color }} />
+                <div className="flex items-center gap-4">
+                  <span className="w-1 self-stretch shrink-0 rounded" style={{ background: b.color }} />
+                  {b.logo && (
+                    <img
+                      src={b.logo}
+                      alt={`${b.name} logo`}
+                      className="h-14 w-14 shrink-0 rounded-md bg-white object-contain p-1 sm:h-16 sm:w-16"
+                      loading="lazy"
+                    />
+                  )}
                   <div>
                     <h3 className="text-2xl leading-tight">{b.name}</h3>
                     <p className="mt-1 text-xs text-navy/50">{b.tagline}</p>
@@ -113,7 +121,7 @@ export default function Home() {
       {/* FOUNDER QUOTE */}
       <section className="py-20 sm:py-28">
         <div className="container-site grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-          <img src="/team/Shyamraj.jpg" alt={founder.name} className="aspect-[4/5] w-full max-w-sm object-cover" loading="lazy" />
+          <img src="https://ik.imagekit.io/vftyrvygo/Pearl%20World/aboutus_profile_picture.jpg" alt={founder.name} className="aspect-[4/5] w-full max-w-sm object-cover" loading="lazy" />
           <figure>
             <blockquote className="font-serif text-2xl leading-snug sm:text-3xl">“{founder.quote}”</blockquote>
             <figcaption className="mt-6 text-sm text-navy/60">{founder.name} — Founder & CEO, Pearl Edu Ventures</figcaption>

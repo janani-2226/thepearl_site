@@ -74,12 +74,12 @@ export const values = [
   },
 ];
 
-// Team page — to add a photo, put the file in public/team/ and set `image`, e.g. image: "/team/esther.jpg"
+// Team page — photos are hosted on ImageKit; set `image` to the full ImageKit URL.
 export const team = {
   memorial: {
     name: "Muthu V R",
     role: "Guiding Light",
-    image: "/team/Muthu%20annachi.png",
+    image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Muthu%20annachi.png",
     bio: [
       "In loving memory of Muthu V R, whose vision, wisdom and values continue to inspire THE PEARL EDU VENTURES. His legacy remains a guiding force, shaping the organisation's purpose and inspiring its leadership. His belief in education, excellence and service will continue to illuminate the Pearl journey and the generations it seeks to empower.",
     ],
@@ -88,7 +88,7 @@ export const team = {
     {
       name: "Shyamraj",
       role: "Founder & CEO",
-      image: "/team/Shyamraj.jpg",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/aboutus_profile_picture.jpg",
       bio: [
         "The visionary behind THE PEARL EDU VENTURES, Shyamraj leads the group's mission to transform learning through education, communication, skills and technology. He drives the development of its diverse brands, creating opportunities that empower teachers, students and individuals to become confident, capable and future-ready.",
       ],
@@ -96,7 +96,7 @@ export const team = {
     {
       name: "Esther",
       role: "Director – Academics & L&D",
-      image: "/team/Esther.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Esther.png",
       bio: [
         "Esther leads academic excellence and Learning & Development across THE PEARL brands - Beehive, ProjectPunch, Pearl Academy and Smart3Tuitions.",
         "She drives curriculum development, teaching methodologies, educator training and learning standards, ensuring that every programme delivers engaging, structured and impactful learning experiences for teachers, students and individuals.",
@@ -105,7 +105,7 @@ export const team = {
     {
       name: "Kalyan",
       role: "Director – Growth & Partnerships",
-      image: "/team/Kalyan%20Web.jpg",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Kalyan%20Web.jpg",
       bio: [
         "Kalyan drives strategic growth, business development and partnerships across THE PEARL ecosystem. With over 25 years of cross-industry leadership experience, he focuses on market expansion, institutional collaborations, brand positioning and scalable business models to build sustainable education ventures and create long-term value.",
       ],
@@ -113,7 +113,7 @@ export const team = {
     {
       name: "Bamini",
       role: "Director – Operations & Schools",
-      image: "/team/Bamini.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Bamini.png",
       imagePosition: "top",
       bio: [
         "Bamini leads operational excellence and school partnerships across THE PEARL. She focuses on programme implementation, institutional relationships, process management and service delivery, ensuring that educational initiatives reach schools effectively and create meaningful learning experiences for students and educators.",
@@ -122,7 +122,7 @@ export const team = {
     {
       name: "Kamala",
       role: "Director – Human Resources & Finance",
-      image: "/team/Kamala.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Kamala.png",
       bio: [
         "Kamala leads people management and financial operations at THE PEARL. She focuses on talent development, organisational culture, financial planning, budgeting and resource management, building a strong, accountable and financially sustainable organisation that supports the group's growth and ambitions.",
       ],
@@ -130,7 +130,7 @@ export const team = {
     {
       name: "Maheswari",
       role: "Brand Head – BeeHive Communication Club",
-      image: "/team/Maheswari.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Maheswari.png",
       imagePosition: "top",
       bio: [
         "Maheswari leads BeeHive Communication Club, focused on building confident school communicators and leaders. She drives school engagement and programme delivery, helping students develop communicative English, public speaking, self-expression and leadership skills to find their voice and dare to speak.",
@@ -139,7 +139,7 @@ export const team = {
     {
       name: "Selvarubini",
       role: "Brand Head – Abacus of English",
-      image: "/team/rubini.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/rubini.png",
       imagePosition: "top",
       bio: [
         "Selvarubini leads Abacus of English, offering spoken English products for everyone. She focuses on brand development, product outreach and learner engagement, making English learning accessible, practical and engaging while helping individuals build communication skills and confidence for everyday life.",
@@ -148,7 +148,7 @@ export const team = {
     {
       name: "Aruljothi",
       role: "Brand Head – Pearl Academy",
-      image: "/team/Aruljothi.png",
+      image: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Aruljothi.png",
       imagePosition: "top",
       bio: [
         "Aruljothi leads Pearl Academy, dedicated to training teachers to teach English. She drives the academy's programmes and institutional engagement, empowering educators with effective teaching methodologies, language proficiency and classroom confidence to create better learning experiences for students.",

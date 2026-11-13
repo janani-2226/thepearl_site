@@ -4,7 +4,7 @@
 export const brands = [
   {
     slug: "pearl-academy",
-    logo: "/team/Pearl%20Academy.png",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Pearl%20Academy.png",
     name: "Pearl Academy",
     short: "Pearl Academy",
     category: "Teacher training",
@@ -22,7 +22,7 @@ export const brands = [
   },
   {
     slug: "beehive",
-    logo: "/team/beehive%20logo.jpeg",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l1.png?updatedAt=1786009288839",
     name: "Beehive Communication Club",
     short: "Beehive",
     category: "Communication training",
@@ -48,7 +48,7 @@ export const brands = [
   },
   {
     slug: "project-punch",
-    logo: "/team/project%20punch.png",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l2.png?updatedAt=1786009289132",
     name: "Project Punch",
     short: "Project Punch",
     category: "Campus English",
@@ -74,7 +74,7 @@ export const brands = [
   },
   {
     slug: "shyamraj",
-    logo: "/team/shyam.png",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l4.png?updatedAt=1786009289105",
     name: "Shyamraj",
     short: "Shyamraj",
     category: "Speaking and coaching",
@@ -101,7 +101,7 @@ export const brands = [
   },
   {
     slug: "abacus-of-english",
-    logo: "/team/Abacus%20of%20English.png",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/Abacus%20of%20English.png",
     name: "Abacus of English",
     short: "Abacus of English",
     category: "English fundamentals",
@@ -127,7 +127,7 @@ export const brands = [
   },
   {
     slug: "smart3-tuitions",
-    logo: "/team/Smart3Tution.png",
+    logo: "https://ik.imagekit.io/vftyrvygo/Pearl%20World/l3.png?updatedAt=1786009289139",
     name: "Smart3 Tuitions",
     short: "Smart3 Tuitions",
     category: "School tuition",
