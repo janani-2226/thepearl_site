@@ -6,10 +6,11 @@ import { brands } from "../data/brands.js";
 import PageHeader from "../components/PageHeader.jsx";
 
 // Enquiries are emailed to pearlsocialz@gmail.com via EmailJS (https://www.emailjs.com).
-// The IDs come from .env (see .env.example).
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+// These IDs are public (they ship to the browser), so the fallbacks keep the form working
+// even when the env vars are missing at build time. Override them via .env / Vercel if needed.
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_tm5wjmp";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_8es61ms";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "uA_X6Y6EY_zDHihe2";
 
 const enquiryTypes = [
   { value: "institution", label: "Programme for my institution" },
